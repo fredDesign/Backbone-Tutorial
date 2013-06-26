@@ -14,11 +14,11 @@
 
     <!--template-->
     <script type="text/template" id="contact-template">
-        <li>
-            <a href="contact.php?id<%= id %>">
+
+            <a href="#contact/<%= id %>">
                 <%= prenom %> <%= Nom %>
             </a>
-        </li>
+
     </script>
 </head>
 <body>
@@ -33,8 +33,14 @@
 
         <div id="container">
             <ul id="contact-list">
-
+                 <h1>chargement</h1>
             </ul>
+            <div id="changeContact">
+                <input id="contactPrenom" type="text">
+                <input id="contactNom" type="text">
+                <input id="contactChangeButton" type="Button" value="valider">
+
+            </div>
         </div>
 
 
@@ -92,10 +98,9 @@
 
 <script src="javascripts/foundation/foundation.topbar.js"></script>
 
-// contactJS
 
-<script src="javascripts/backbone/scriptBB/contact.js"></script>
-<script src="javascripts/backbone/scriptBB/main.js"></script>
+<script src="javascripts/backbone/scriptBB/contactBDB2.js"></script>
+<script src="javascripts/backbone/scriptBB/mainBDB2.js"></script>
 
 
 <style>
