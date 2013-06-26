@@ -1,0 +1,143 @@
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Backbone START</title>
+
+    <link rel="stylesheet" href="stylesheets/normalize.css"/>
+
+    <link rel="stylesheet" href="stylesheets/app.css"/>
+
+    <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+
+    <script src="javascripts/backbone/underscore-min.js"></script>
+    <script src="javascripts/backbone/backbone-min.js"></script>
+
+    <script src="javascripts/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <h3>Backbone Start</h3>
+    </div>
+    <div class="large-12 columns" id="screener">
+        <h3>My Workspace</h3>
+
+        <div id="container">
+            <ul id="contact-list">
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div class="row" id='interface'>
+        <div class="large-6 columns">
+            <p><a href="#" class="left alert button">right Button</a></p>
+        </div>
+        <div class="large-6 columns">
+            <p><a href="#" class="right alert button">Small Alert Button</a></p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.write('<script src=' +
+            ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+            '.js><\/script>')
+</script>
+<script src="javascripts/vendor/jquery.js"></script>
+<script src="javascripts/foundation/foundation.js"></script>
+
+<script src="javascripts/foundation/foundation.alerts.js"></script>
+
+<script src="javascripts/foundation/foundation.clearing.js"></script>
+
+<script src="javascripts/foundation/foundation.cookie.js"></script>
+
+<script src="javascripts/foundation/foundation.dropdown.js"></script>
+
+<script src="javascripts/foundation/foundation.forms.js"></script>
+
+<script src="javascripts/foundation/foundation.joyride.js"></script>
+
+<script src="javascripts/foundation/foundation.magellan.js"></script>
+
+<script src="javascripts/foundation/foundation.orbit.js"></script>
+
+<script src="javascripts/foundation/foundation.placeholder.js"></script>
+
+<script src="javascripts/foundation/foundation.reveal.js"></script>
+
+<script src="javascripts/foundation/foundation.section.js"></script>
+
+<script src="javascripts/foundation/foundation.tooltips.js"></script>
+
+<script src="javascripts/foundation/foundation.topbar.js"></script>
+
+
+<style>
+    .screener {
+        position: relative
+    }
+
+    .sprite {
+        position: absolute;
+        left: 200px;
+        top: 0px;
+    }
+    ol,dl,ul,li {
+        list-style-position: inside;
+    }
+</style>
+<script>
+    $(document).foundation();
+
+    /************BAckbone*************/
+    (function ($) {
+        /*--- initialisation de la webapp ---*/
+        var contacts;
+
+        $(function () {
+            var main = function () {
+                //contacts list
+                contacts =
+                        [
+                            {id: 1, prenom: 'Sebastien', Nom: 'ALLIO' },
+
+
+                            {id: 2, prenom: 'Fabien', Nom: 'MANNEVILLE'},
+
+
+                            {id: 3, prenom: 'Matthieu', Nom: 'DEHAUSSY'}
+                        ]
+
+                ;
+                $("#contact-list").empty();
+                var contact;
+                for (i = 0, l = contacts.length; i < l; i++) {
+                    contact = contacts[i];
+                    $('#contact-list').append(
+                            '<li>' + contact.prenom + '' + contact.Nom + '</li>'
+                    )
+                }
+            }
+            $("#contact-list").append("<li><h1>En attente</h1></li>");
+
+             setTimeout(main,3000)
+            ;
+
+        })
+    })
+            (jQuery);
+
+</script>
+</body>
+</html>
